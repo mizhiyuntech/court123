@@ -31,10 +31,11 @@ jobs:
         run: npm ci
 
       - name: Build Android APK
-        run: eas build --platform android --profile preview --non-interactive --no-wait
+        run: eas build --platform android --profile preview --non-interactive
 
   build-android-aab:
     runs-on: ubuntu-latest
+    needs: build-android-apk
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     steps:
       - name: Checkout repository
@@ -57,4 +58,4 @@ jobs:
         run: npm ci
 
       - name: Build Android AAB
-        run: eas build --platform android --profile production --non-interactive --no-wait
+        run: eas build --platform android --profile production --non-interactive
