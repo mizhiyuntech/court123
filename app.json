@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "ak",
-    "slug": "ak-app",
+    "slug": "ak",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
