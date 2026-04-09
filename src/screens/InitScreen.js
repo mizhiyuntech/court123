@@ -110,3 +110,921 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
 });
+importimport { StyleSheet, Text, View, ActivityIndicator, Platform } from 'react-native';
+import { StyleSheet, Text, View, ActivityIndicator, Platform } from 'react-native';
+import { useState, useEffect } from 'react';
+import Colors from '../constants/Colors';import { StyleSheet, Text, View, ActivityIndicator, Platform } from 'react-native';
+import { useState, useEffect } from 'react';
+import Colors from '../constants/Colors';
+import PermissionRequest from '../components/PermissionRequest';
+
+export default functionimport { StyleSheet, Text, View, ActivityIndicator, Platform } from 'react-native';
+import { useState, useEffect } from 'react';
+import Colors from '../constants/Colors';
+import PermissionRequest from '../components/PermissionRequest';
+
+export default function InitScreen({ onInitComplete }) {
+  const [isPermissionGranted, setIsPermissionimport { StyleSheet, Text, View, ActivityIndicator, Platform } from 'react-native';
+import { useState, useEffect } from 'react';
+import Colors from '../constants/Colors';
+import PermissionRequest from '../components/PermissionRequest';
+
+export default function InitScreen({ onInitComplete }) {
+  const [isPermissionGranted, setIsPermissionGranted] = useState(false);
+
+  useEffect(() => {
+    if (isimport { StyleSheet, Text, View, ActivityIndicator, Platform } from 'react-native';
+import { useState, useEffect } from 'react';
+import Colors from '../constants/Colors';
+import PermissionRequest from '../components/PermissionRequest';
+
+export default function InitScreen({ onInitComplete }) {
+  const [isPermissionGranted, setIsPermissionGranted] = useState(false);
+
+  useEffect(() => {
+    if (isPermissionGranted) {
+      // 延迟初始化，确保权限请求完全完成
+      constimport { StyleSheet, Text, View, ActivityIndicator, Platform } from 'react-native';
+import { useState, useEffect } from 'react';
+import Colors from '../constants/Colors';
+import PermissionRequest from '../components/PermissionRequest';
+
+export default function InitScreen({ onInitComplete }) {
+  const [isPermissionGranted, setIsPermissionGranted] = useState(false);
+
+  useEffect(() => {
+    if (isPermissionGranted) {
+      // 延迟初始化，确保权限请求完全完成
+      const timer = setTimeout(() => {
+        initializeApp();
+      }, 300);import { StyleSheet, Text, View, ActivityIndicator, Platform } from 'react-native';
+import { useState, useEffect } from 'react';
+import Colors from '../constants/Colors';
+import PermissionRequest from '../components/PermissionRequest';
+
+export default function InitScreen({ onInitComplete }) {
+  const [isPermissionGranted, setIsPermissionGranted] = useState(false);
+
+  useEffect(() => {
+    if (isPermissionGranted) {
+      // 延迟初始化，确保权限请求完全完成
+      const timer = setTimeout(() => {
+        initializeApp();
+      }, 300);
+      
+      return () => clearTimeout(timer);
+    }
+import { StyleSheet, Text, View, ActivityIndicator, Platform } from 'react-native';
+import { useState, useEffect } from 'react';
+import Colors from '../constants/Colors';
+import PermissionRequest from '../components/PermissionRequest';
+
+export default function InitScreen({ onInitComplete }) {
+  const [isPermissionGranted, setIsPermissionGranted] = useState(false);
+
+  useEffect(() => {
+    if (isPermissionGranted) {
+      // 延迟初始化，确保权限请求完全完成
+      const timer = setTimeout(() => {
+        initializeApp();
+      }, 300);
+      
+      return () => clearTimeout(timer);
+    }
+  }, [isPermissionGranted]);
+
+  const handlePermissionGranted = () => {
+    setIsPermissionGranted(true);
+  };
+
+  const initializeAppimport { StyleSheet, Text, View, ActivityIndicator, Platform } from 'react-native';
+import { useState, useEffect } from 'react';
+import Colors from '../constants/Colors';
+import PermissionRequest from '../components/PermissionRequest';
+
+export default function InitScreen({ onInitComplete }) {
+  const [isPermissionGranted, setIsPermissionGranted] = useState(false);
+
+  useEffect(() => {
+    if (isPermissionGranted) {
+      // 延迟初始化，确保权限请求完全完成
+      const timer = setTimeout(() => {
+        initializeApp();
+      }, 300);
+      
+      return () => clearTimeout(timer);
+    }
+  }, [isPermissionGranted]);
+
+  const handlePermissionGranted = () => {
+    setIsPermissionGranted(true);
+  };
+
+  const initializeApp = async () => {
+    try {
+      await checkAndDownloadImage();
+import { StyleSheet, Text, View, ActivityIndicator, Platform } from 'react-native';
+import { useState, useEffect } from 'react';
+import Colors from '../constants/Colors';
+import PermissionRequest from '../components/PermissionRequest';
+
+export default function InitScreen({ onInitComplete }) {
+  const [isPermissionGranted, setIsPermissionGranted] = useState(false);
+
+  useEffect(() => {
+    if (isPermissionGranted) {
+      // 延迟初始化，确保权限请求完全完成
+      const timer = setTimeout(() => {
+        initializeApp();
+      }, 300);
+      
+      return () => clearTimeout(timer);
+    }
+  }, [isPermissionGranted]);
+
+  const handlePermissionGranted = () => {
+    setIsPermissionGranted(true);
+  };
+
+  const initializeApp = async () => {
+    try {
+      await checkAndDownloadImage();
+      // 延迟一下再完成初始化，让用户看到初始化界面
+      setTimeout(() => {
+import { StyleSheet, Text, View, ActivityIndicator, Platform } from 'react-native';
+import { useState, useEffect } from 'react';
+import Colors from '../constants/Colors';
+import PermissionRequest from '../components/PermissionRequest';
+
+export default function InitScreen({ onInitComplete }) {
+  const [isPermissionGranted, setIsPermissionGranted] = useState(false);
+
+  useEffect(() => {
+    if (isPermissionGranted) {
+      // 延迟初始化，确保权限请求完全完成
+      const timer = setTimeout(() => {
+        initializeApp();
+      }, 300);
+      
+      return () => clearTimeout(timer);
+    }
+  }, [isPermissionGranted]);
+
+  const handlePermissionGranted = () => {
+    setIsPermissionGranted(true);
+  };
+
+  const initializeApp = async () => {
+    try {
+      await checkAndDownloadImage();
+      // 延迟一下再完成初始化，让用户看到初始化界面
+      setTimeout(() => {
+        onInitComplete();
+      }, 1000);
+    } catchimport { StyleSheet, Text, View, ActivityIndicator, Platform } from 'react-native';
+import { useState, useEffect } from 'react';
+import Colors from '../constants/Colors';
+import PermissionRequest from '../components/PermissionRequest';
+
+export default function InitScreen({ onInitComplete }) {
+  const [isPermissionGranted, setIsPermissionGranted] = useState(false);
+
+  useEffect(() => {
+    if (isPermissionGranted) {
+      // 延迟初始化，确保权限请求完全完成
+      const timer = setTimeout(() => {
+        initializeApp();
+      }, 300);
+      
+      return () => clearTimeout(timer);
+    }
+  }, [isPermissionGranted]);
+
+  const handlePermissionGranted = () => {
+    setIsPermissionGranted(true);
+  };
+
+  const initializeApp = async () => {
+    try {
+      await checkAndDownloadImage();
+      // 延迟一下再完成初始化，让用户看到初始化界面
+      setTimeout(() => {
+        onInitComplete();
+      }, 1000);
+    } catch (error) {
+      console.error('初始化失败:', error);
+      // 即使import { StyleSheet, Text, View, ActivityIndicator, Platform } from 'react-native';
+import { useState, useEffect } from 'react';
+import Colors from '../constants/Colors';
+import PermissionRequest from '../components/PermissionRequest';
+
+export default function InitScreen({ onInitComplete }) {
+  const [isPermissionGranted, setIsPermissionGranted] = useState(false);
+
+  useEffect(() => {
+    if (isPermissionGranted) {
+      // 延迟初始化，确保权限请求完全完成
+      const timer = setTimeout(() => {
+        initializeApp();
+      }, 300);
+      
+      return () => clearTimeout(timer);
+    }
+  }, [isPermissionGranted]);
+
+  const handlePermissionGranted = () => {
+    setIsPermissionGranted(true);
+  };
+
+  const initializeApp = async () => {
+    try {
+      await checkAndDownloadImage();
+      // 延迟一下再完成初始化，让用户看到初始化界面
+      setTimeout(() => {
+        onInitComplete();
+      }, 1000);
+    } catch (error) {
+      console.error('初始化失败:', error);
+      // 即使失败也继续，避免应用闪退
+      setTimeout(() => {
+        onInitComplete();
+      }, 1000);
+    }
+  };
+
+import { StyleSheet, Text, View, ActivityIndicator, Platform } from 'react-native';
+import { useState, useEffect } from 'react';
+import Colors from '../constants/Colors';
+import PermissionRequest from '../components/PermissionRequest';
+
+export default function InitScreen({ onInitComplete }) {
+  const [isPermissionGranted, setIsPermissionGranted] = useState(false);
+
+  useEffect(() => {
+    if (isPermissionGranted) {
+      // 延迟初始化，确保权限请求完全完成
+      const timer = setTimeout(() => {
+        initializeApp();
+      }, 300);
+      
+      return () => clearTimeout(timer);
+    }
+  }, [isPermissionGranted]);
+
+  const handlePermissionGranted = () => {
+    setIsPermissionGranted(true);
+  };
+
+  const initializeApp = async () => {
+    try {
+      await checkAndDownloadImage();
+      // 延迟一下再完成初始化，让用户看到初始化界面
+      setTimeout(() => {
+        onInitComplete();
+      }, 1000);
+    } catch (error) {
+      console.error('初始化失败:', error);
+      // 即使失败也继续，避免应用闪退
+      setTimeout(() => {
+        onInitComplete();
+      }, 1000);
+    }
+  };
+
+  const checkAndDownloadImage = async () => {
+    try {
+      if (Platform.OS === 'web') {
+        // Web 平台跳过文件系统操作
+        return;
+      }
+      
+      console.logimport { StyleSheet, Text, View, ActivityIndicator, Platform } from 'react-native';
+import { useState, useEffect } from 'react';
+import Colors from '../constants/Colors';
+import PermissionRequest from '../components/PermissionRequest';
+
+export default function InitScreen({ onInitComplete }) {
+  const [isPermissionGranted, setIsPermissionGranted] = useState(false);
+
+  useEffect(() => {
+    if (isPermissionGranted) {
+      // 延迟初始化，确保权限请求完全完成
+      const timer = setTimeout(() => {
+        initializeApp();
+      }, 300);
+      
+      return () => clearTimeout(timer);
+    }
+  }, [isPermissionGranted]);
+
+  const handlePermissionGranted = () => {
+    setIsPermissionGranted(true);
+  };
+
+  const initializeApp = async () => {
+    try {
+      await checkAndDownloadImage();
+      // 延迟一下再完成初始化，让用户看到初始化界面
+      setTimeout(() => {
+        onInitComplete();
+      }, 1000);
+    } catch (error) {
+      console.error('初始化失败:', error);
+      // 即使失败也继续，避免应用闪退
+      setTimeout(() => {
+        onInitComplete();
+      }, 1000);
+    }
+  };
+
+  const checkAndDownloadImage = async () => {
+    try {
+      if (Platform.OS === 'web') {
+        // Web 平台跳过文件系统操作
+        return;
+      }
+      
+      console.log('检查 Ubuntu 镜像...');
+import { StyleSheet, Text, View, ActivityIndicator, Platform } from 'react-native';
+import { useState, useEffect } from 'react';
+import Colors from '../constants/Colors';
+import PermissionRequest from '../components/PermissionRequest';
+
+export default function InitScreen({ onInitComplete }) {
+  const [isPermissionGranted, setIsPermissionGranted] = useState(false);
+
+  useEffect(() => {
+    if (isPermissionGranted) {
+      // 延迟初始化，确保权限请求完全完成
+      const timer = setTimeout(() => {
+        initializeApp();
+      }, 300);
+      
+      return () => clearTimeout(timer);
+    }
+  }, [isPermissionGranted]);
+
+  const handlePermissionGranted = () => {
+    setIsPermissionGranted(true);
+  };
+
+  const initializeApp = async () => {
+    try {
+      await checkAndDownloadImage();
+      // 延迟一下再完成初始化，让用户看到初始化界面
+      setTimeout(() => {
+        onInitComplete();
+      }, 1000);
+    } catch (error) {
+      console.error('初始化失败:', error);
+      // 即使失败也继续，避免应用闪退
+      setTimeout(() => {
+        onInitComplete();
+      }, 1000);
+    }
+  };
+
+  const checkAndDownloadImage = async () => {
+    try {
+      if (Platform.OS === 'web') {
+        // Web 平台跳过文件系统操作
+        return;
+      }
+      
+      console.log('检查 Ubuntu 镜像...');
+      // 模拟检查过程
+      await new Promise(resolve => setTimeout(resolve, 50import { StyleSheet, Text, View, ActivityIndicator, Platform } from 'react-native';
+import { useState, useEffect } from 'react';
+import Colors from '../constants/Colors';
+import PermissionRequest from '../components/PermissionRequest';
+
+export default function InitScreen({ onInitComplete }) {
+  const [isPermissionGranted, setIsPermissionGranted] = useState(false);
+
+  useEffect(() => {
+    if (isPermissionGranted) {
+      // 延迟初始化，确保权限请求完全完成
+      const timer = setTimeout(() => {
+        initializeApp();
+      }, 300);
+      
+      return () => clearTimeout(timer);
+    }
+  }, [isPermissionGranted]);
+
+  const handlePermissionGranted = () => {
+    setIsPermissionGranted(true);
+  };
+
+  const initializeApp = async () => {
+    try {
+      await checkAndDownloadImage();
+      // 延迟一下再完成初始化，让用户看到初始化界面
+      setTimeout(() => {
+        onInitComplete();
+      }, 1000);
+    } catch (error) {
+      console.error('初始化失败:', error);
+      // 即使失败也继续，避免应用闪退
+      setTimeout(() => {
+        onInitComplete();
+      }, 1000);
+    }
+  };
+
+  const checkAndDownloadImage = async () => {
+    try {
+      if (Platform.OS === 'web') {
+        // Web 平台跳过文件系统操作
+        return;
+      }
+      
+      console.log('检查 Ubuntu 镜像...');
+      // 模拟检查过程
+      await new Promise(resolve => setTimeout(resolve, 500));
+      
+      console.log('开始下载 Ubuntu 镜像...');
+import { StyleSheet, Text, View, ActivityIndicator, Platform } from 'react-native';
+import { useState, useEffect } from 'react';
+import Colors from '../constants/Colors';
+import PermissionRequest from '../components/PermissionRequest';
+
+export default function InitScreen({ onInitComplete }) {
+  const [isPermissionGranted, setIsPermissionGranted] = useState(false);
+
+  useEffect(() => {
+    if (isPermissionGranted) {
+      // 延迟初始化，确保权限请求完全完成
+      const timer = setTimeout(() => {
+        initializeApp();
+      }, 300);
+      
+      return () => clearTimeout(timer);
+    }
+  }, [isPermissionGranted]);
+
+  const handlePermissionGranted = () => {
+    setIsPermissionGranted(true);
+  };
+
+  const initializeApp = async () => {
+    try {
+      await checkAndDownloadImage();
+      // 延迟一下再完成初始化，让用户看到初始化界面
+      setTimeout(() => {
+        onInitComplete();
+      }, 1000);
+    } catch (error) {
+      console.error('初始化失败:', error);
+      // 即使失败也继续，避免应用闪退
+      setTimeout(() => {
+        onInitComplete();
+      }, 1000);
+    }
+  };
+
+  const checkAndDownloadImage = async () => {
+    try {
+      if (Platform.OS === 'web') {
+        // Web 平台跳过文件系统操作
+        return;
+      }
+      
+      console.log('检查 Ubuntu 镜像...');
+      // 模拟检查过程
+      await new Promise(resolve => setTimeout(resolve, 500));
+      
+      console.log('开始下载 Ubuntu 镜像...');
+      // 模拟下载过程
+      await new Promise(resolve => setTimeout(resolve, 1import { StyleSheet, Text, View, ActivityIndicator, Platform } from 'react-native';
+import { useState, useEffect } from 'react';
+import Colors from '../constants/Colors';
+import PermissionRequest from '../components/PermissionRequest';
+
+export default function InitScreen({ onInitComplete }) {
+  const [isPermissionGranted, setIsPermissionGranted] = useState(false);
+
+  useEffect(() => {
+    if (isPermissionGranted) {
+      // 延迟初始化，确保权限请求完全完成
+      const timer = setTimeout(() => {
+        initializeApp();
+      }, 300);
+      
+      return () => clearTimeout(timer);
+    }
+  }, [isPermissionGranted]);
+
+  const handlePermissionGranted = () => {
+    setIsPermissionGranted(true);
+  };
+
+  const initializeApp = async () => {
+    try {
+      await checkAndDownloadImage();
+      // 延迟一下再完成初始化，让用户看到初始化界面
+      setTimeout(() => {
+        onInitComplete();
+      }, 1000);
+    } catch (error) {
+      console.error('初始化失败:', error);
+      // 即使失败也继续，避免应用闪退
+      setTimeout(() => {
+        onInitComplete();
+      }, 1000);
+    }
+  };
+
+  const checkAndDownloadImage = async () => {
+    try {
+      if (Platform.OS === 'web') {
+        // Web 平台跳过文件系统操作
+        return;
+      }
+      
+      console.log('检查 Ubuntu 镜像...');
+      // 模拟检查过程
+      await new Promise(resolve => setTimeout(resolve, 500));
+      
+      console.log('开始下载 Ubuntu 镜像...');
+      // 模拟下载过程
+      await new Promise(resolve => setTimeout(resolve, 1500));
+      
+      console.log('镜像下载完成');
+import { StyleSheet, Text, View, ActivityIndicator, Platform } from 'react-native';
+import { useState, useEffect } from 'react';
+import Colors from '../constants/Colors';
+import PermissionRequest from '../components/PermissionRequest';
+
+export default function InitScreen({ onInitComplete }) {
+  const [isPermissionGranted, setIsPermissionGranted] = useState(false);
+
+  useEffect(() => {
+    if (isPermissionGranted) {
+      // 延迟初始化，确保权限请求完全完成
+      const timer = setTimeout(() => {
+        initializeApp();
+      }, 300);
+      
+      return () => clearTimeout(timer);
+    }
+  }, [isPermissionGranted]);
+
+  const handlePermissionGranted = () => {
+    setIsPermissionGranted(true);
+  };
+
+  const initializeApp = async () => {
+    try {
+      await checkAndDownloadImage();
+      // 延迟一下再完成初始化，让用户看到初始化界面
+      setTimeout(() => {
+        onInitComplete();
+      }, 1000);
+    } catch (error) {
+      console.error('初始化失败:', error);
+      // 即使失败也继续，避免应用闪退
+      setTimeout(() => {
+        onInitComplete();
+      }, 1000);
+    }
+  };
+
+  const checkAndDownloadImage = async () => {
+    try {
+      if (Platform.OS === 'web') {
+        // Web 平台跳过文件系统操作
+        return;
+      }
+      
+      console.log('检查 Ubuntu 镜像...');
+      // 模拟检查过程
+      await new Promise(resolve => setTimeout(resolve, 500));
+      
+      console.log('开始下载 Ubuntu 镜像...');
+      // 模拟下载过程
+      await new Promise(resolve => setTimeout(resolve, 1500));
+      
+      console.log('镜像下载完成');
+    } catch (error) {
+      console.error('检查镜像文件失败:', error);
+import { StyleSheet, Text, View, ActivityIndicator, Platform } from 'react-native';
+import { useState, useEffect } from 'react';
+import Colors from '../constants/Colors';
+import PermissionRequest from '../components/PermissionRequest';
+
+export default function InitScreen({ onInitComplete }) {
+  const [isPermissionGranted, setIsPermissionGranted] = useState(false);
+
+  useEffect(() => {
+    if (isPermissionGranted) {
+      // 延迟初始化，确保权限请求完全完成
+      const timer = setTimeout(() => {
+        initializeApp();
+      }, 300);
+      
+      return () => clearTimeout(timer);
+    }
+  }, [isPermissionGranted]);
+
+  const handlePermissionGranted = () => {
+    setIsPermissionGranted(true);
+  };
+
+  const initializeApp = async () => {
+    try {
+      await checkAndDownloadImage();
+      // 延迟一下再完成初始化，让用户看到初始化界面
+      setTimeout(() => {
+        onInitComplete();
+      }, 1000);
+    } catch (error) {
+      console.error('初始化失败:', error);
+      // 即使失败也继续，避免应用闪退
+      setTimeout(() => {
+        onInitComplete();
+      }, 1000);
+    }
+  };
+
+  const checkAndDownloadImage = async () => {
+    try {
+      if (Platform.OS === 'web') {
+        // Web 平台跳过文件系统操作
+        return;
+      }
+      
+      console.log('检查 Ubuntu 镜像...');
+      // 模拟检查过程
+      await new Promise(resolve => setTimeout(resolve, 500));
+      
+      console.log('开始下载 Ubuntu 镜像...');
+      // 模拟下载过程
+      await new Promise(resolve => setTimeout(resolve, 1500));
+      
+      console.log('镜像下载完成');
+    } catch (error) {
+      console.error('检查镜像文件失败:', error);
+      // 失败时继续，避免应用闪退
+    }
+  };
+
+import { StyleSheet, Text, View, ActivityIndicator, Platform } from 'react-native';
+import { useState, useEffect } from 'react';
+import Colors from '../constants/Colors';
+import PermissionRequest from '../components/PermissionRequest';
+
+export default function InitScreen({ onInitComplete }) {
+  const [isPermissionGranted, setIsPermissionGranted] = useState(false);
+
+  useEffect(() => {
+    if (isPermissionGranted) {
+      // 延迟初始化，确保权限请求完全完成
+      const timer = setTimeout(() => {
+        initializeApp();
+      }, 300);
+      
+      return () => clearTimeout(timer);
+    }
+  }, [isPermissionGranted]);
+
+  const handlePermissionGranted = () => {
+    setIsPermissionGranted(true);
+  };
+
+  const initializeApp = async () => {
+    try {
+      await checkAndDownloadImage();
+      // 延迟一下再完成初始化，让用户看到初始化界面
+      setTimeout(() => {
+        onInitComplete();
+      }, 1000);
+    } catch (error) {
+      console.error('初始化失败:', error);
+      // 即使失败也继续，避免应用闪退
+      setTimeout(() => {
+        onInitComplete();
+      }, 1000);
+    }
+  };
+
+  const checkAndDownloadImage = async () => {
+    try {
+      if (Platform.OS === 'web') {
+        // Web 平台跳过文件系统操作
+        return;
+      }
+      
+      console.log('检查 Ubuntu 镜像...');
+      // 模拟检查过程
+      await new Promise(resolve => setTimeout(resolve, 500));
+      
+      console.log('开始下载 Ubuntu 镜像...');
+      // 模拟下载过程
+      await new Promise(resolve => setTimeout(resolve, 1500));
+      
+      console.log('镜像下载完成');
+    } catch (error) {
+      console.error('检查镜像文件失败:', error);
+      // 失败时继续，避免应用闪退
+    }
+  };
+
+  return (
+    <View style={styles.container}>
+      <Text style={styles.titleimport { StyleSheet, Text, View, ActivityIndicator, Platform } from 'react-native';
+import { useState, useEffect } from 'react';
+import Colors from '../constants/Colors';
+import PermissionRequest from '../components/PermissionRequest';
+
+export default function InitScreen({ onInitComplete }) {
+  const [isPermissionGranted, setIsPermissionGranted] = useState(false);
+
+  useEffect(() => {
+    if (isPermissionGranted) {
+      // 延迟初始化，确保权限请求完全完成
+      const timer = setTimeout(() => {
+        initializeApp();
+      }, 300);
+      
+      return () => clearTimeout(timer);
+    }
+  }, [isPermissionGranted]);
+
+  const handlePermissionGranted = () => {
+    setIsPermissionGranted(true);
+  };
+
+  const initializeApp = async () => {
+    try {
+      await checkAndDownloadImage();
+      // 延迟一下再完成初始化，让用户看到初始化界面
+      setTimeout(() => {
+        onInitComplete();
+      }, 1000);
+    } catch (error) {
+      console.error('初始化失败:', error);
+      // 即使失败也继续，避免应用闪退
+      setTimeout(() => {
+        onInitComplete();
+      }, 1000);
+    }
+  };
+
+  const checkAndDownloadImage = async () => {
+    try {
+      if (Platform.OS === 'web') {
+        // Web 平台跳过文件系统操作
+        return;
+      }
+      
+      console.log('检查 Ubuntu 镜像...');
+      // 模拟检查过程
+      await new Promise(resolve => setTimeout(resolve, 500));
+      
+      console.log('开始下载 Ubuntu 镜像...');
+      // 模拟下载过程
+      await new Promise(resolve => setTimeout(resolve, 1500));
+      
+      console.log('镜像下载完成');
+    } catch (error) {
+      console.error('检查镜像文件失败:', error);
+      // 失败时继续，避免应用闪退
+    }
+  };
+
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>初始化中</Text>
+      <Text style={styles.subtitle}>正在准备开发环境import { StyleSheet, Text, View, ActivityIndicator, Platform } from 'react-native';
+import { useState, useEffect } from 'react';
+import Colors from '../constants/Colors';
+import PermissionRequest from '../components/PermissionRequest';
+
+export default function InitScreen({ onInitComplete }) {
+  const [isPermissionGranted, setIsPermissionGranted] = useState(false);
+
+  useEffect(() => {
+    if (isPermissionGranted) {
+      // 延迟初始化，确保权限请求完全完成
+      const timer = setTimeout(() => {
+        initializeApp();
+      }, 300);
+      
+      return () => clearTimeout(timer);
+    }
+  }, [isPermissionGranted]);
+
+  const handlePermissionGranted = () => {
+    setIsPermissionGranted(true);
+  };
+
+  const initializeApp = async () => {
+    try {
+      await checkAndDownloadImage();
+      // 延迟一下再完成初始化，让用户看到初始化界面
+      setTimeout(() => {
+        onInitComplete();
+      }, 1000);
+    } catch (error) {
+      console.error('初始化失败:', error);
+      // 即使失败也继续，避免应用闪退
+      setTimeout(() => {
+        onInitComplete();
+      }, 1000);
+    }
+  };
+
+  const checkAndDownloadImage = async () => {
+    try {
+      if (Platform.OS === 'web') {
+        // Web 平台跳过文件系统操作
+        return;
+      }
+      
+      console.log('检查 Ubuntu 镜像...');
+      // 模拟检查过程
+      await new Promise(resolve => setTimeout(resolve, 500));
+      
+      console.log('开始下载 Ubuntu 镜像...');
+      // 模拟下载过程
+      await new Promise(resolve => setTimeout(resolve, 1500));
+      
+      console.log('镜像下载完成');
+    } catch (error) {
+      console.error('检查镜像文件失败:', error);
+      // 失败时继续，避免应用闪退
+    }
+  };
+
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>初始化中</Text>
+      <Text style={styles.subtitle}>正在准备开发环境</Text>
+      <ActivityIndicator size="large" color={Colors.primary} style={import { StyleSheet, Text, View, ActivityIndicator, Platform } from 'react-native';
+import { useState, useEffect } from 'react';
+import Colors from '../constants/Colors';
+import PermissionRequest from '../components/PermissionRequest';
+
+export default function InitScreen({ onInitComplete }) {
+  const [isPermissionGranted, setIsPermissionGranted] = useState(false);
+
+  useEffect(() => {
+    if (isPermissionGranted) {
+      // 延迟初始化，确保权限请求完全完成
+      const timer = setTimeout(() => {
+        initializeApp();
+      }, 300);
+      
+      return () => clearTimeout(timer);
+    }
+  }, [isPermissionGranted]);
+
+  const handlePermissionGranted = () => {
+    setIsPermissionGranted(true);
+  };
+
+  const initializeApp = async () => {
+    try {
+      await checkAndDownloadImage();
+      // 延迟一下再完成初始化，让用户看到初始化界面
+      setTimeout(() => {
+        onInitComplete();
+      }, 1000);
+    } catch (error) {
+      console.error('初始化失败:', error);
+      // 即使失败也继续，避免应用闪退
+      setTimeout(() => {
+        onInitComplete();
+      }, 1000);
+    }
+  };
+
+  const checkAndDownloadImage = async () => {
+    try {
+      if (Platform.OS === 'web') {
+        // Web 平台跳过文件系统操作
+        return;
+      }
+      
+      console.log('检查 Ubuntu 镜像...');
+      // 模拟检查过程
+      await new Promise(resolve => setTimeout(resolve, 500));
+      
+      console.log('开始下载 Ubuntu 镜像...');
+      // 模拟下载过程
+      await new Promise(resolve => setTimeout(resolve, 1500));
+      
+      console.log('镜像下载完成');
+    } catch (error) {
+      console.error('检查镜像文件失败:', error);
+      // 失败时继续，避免应用闪退
+    }
+  };
+
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>初始化中</Text>
+      <Text style={styles.subtitle}>正在准备开发环境</Text>
+      <ActivityIndicator size="large" color={Colors.primary} style={styles.loader} />
+      <PermissionRequest onPermissionGranted={handlePermissionGranted
